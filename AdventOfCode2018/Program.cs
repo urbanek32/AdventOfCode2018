@@ -1,4 +1,5 @@
 ﻿using System;
+using AdventOfCode2018.Day1;
 
 namespace AdventOfCode2018
 {
@@ -6,7 +7,8 @@ namespace AdventOfCode2018
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            new SolutionDay1().RunSolutionPart2();
+            Console.ReadKey();
         }
     }
 }
