@@ -9,14 +9,14 @@ namespace AdventOfCode2018.Day3
     {
         public void RunSolutionPart1()
         {
-            //var fileLines = File.ReadAllLines("Day3/input.txt");
-            var fileLines = new List<string>
+            var fileLines = File.ReadAllLines("Day3/input.txt");
+            /*var fileLines = new List<string>
             {
                 "#1 @ 1,3: 4x4",
                 "#2 @ 3,1: 4x4",
                 "#3 @ 5,5: 2x2"
-            };
-            var coords = new HashSet<Tuple<int, int>>(new TupleComparer());
+            };*/
+            var coords = new int[1000, 1000];
             var conflicts = 0;
 
             foreach (var line in fileLines)
@@ -27,7 +27,8 @@ namespace AdventOfCode2018.Day3
                 {
                     for (var j = input.Y; j < input.Y + input.Height; j++)
                     {
-                        if (!coords.Add(Tuple.Create(i, j)))
+                        coords[i, j]++;
+                        if (coords[i, j] > 1)
                         {
                             conflicts++;
                         }
@@ -36,7 +37,7 @@ namespace AdventOfCode2018.Day3
             }
 
             Console.WriteLine($"Conflicts: {conflicts}");
-            File.WriteAllText("out.txt", $"{coords.Count} - {conflicts}");
+            File.WriteAllText("out.txt", $"{conflicts}");
         }
 
         public void RunSolutionPart2()
