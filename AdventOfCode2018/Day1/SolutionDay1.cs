@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace AdventOfCode2018.Day1
 {
@@ -9,12 +10,7 @@ namespace AdventOfCode2018.Day1
         public void RunSolutionPart1()
         {
             var fileLines = File.ReadAllLines("Day1/input.txt");
-            var frequency = 0;
-
-            foreach (var line in fileLines)
-            {
-                frequency += int.Parse(line);
-            }
+            var frequency = fileLines.Sum(line => int.Parse(line));
 
             Console.WriteLine(frequency);
         }
