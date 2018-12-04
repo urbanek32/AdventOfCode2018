@@ -86,7 +86,7 @@ namespace AdventOfCode2018.Day3
                 {
                     for (var j = value.Y; j < value.Y + value.Height; j++)
                     {
-                        if (coords[i, j] != 1)
+                        if (coords[i, j] > 1)
                         {
                             overlaps++;
                         }
