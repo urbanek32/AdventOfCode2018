@@ -72,14 +72,13 @@ namespace AdventOfCode2018.Day6
                 }
             }
 
-            excluded = excluded.Distinct().ToList();
             var result = counts
                 .Where(k => !excluded.Contains(k.Key))
                 .OrderByDescending(k => k.Value)
                 .First();
 
-            Console.WriteLine($"PartA:{result.Value}");
-            Console.WriteLine($"{safeCount}");
+            Console.WriteLine($"Part 1: {result.Value}");
+            Console.WriteLine($"Part 2: {safeCount}");
         }
 
         private static int Distance(int x, int y, int pointX, int pointY)
