@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace AdventOfCode2018.Day5
 {
@@ -9,7 +12,7 @@ namespace AdventOfCode2018.Day5
         {
             var inputFile = File.ReadAllText("Day5/input.txt");
             //var inputFile = "dabAcCaCBAcCcaDA";
-            
+
             Console.WriteLine($"{Polymerification(inputFile)}");
         }
 
@@ -36,7 +39,17 @@ namespace AdventOfCode2018.Day5
 
         public void RunSolutionPart2()
         {
+            var inputFile = File.ReadAllText("Day5/input.txt");
+            //var inputFile = "dabAcCaCBAcCcaDA";
+            var lengths = new List<int>();
 
+            for (var i = 65; i < 91; i++)
+            {
+                var regex = new Regex($"{(char)i}|{((char)i).ToString().ToLower()}");
+                var parsedInput = regex.Replace(inputFile, string.Empty);
+                lengths.Add(Polymerification(parsedInput));
+            }
+            Console.WriteLine($"{lengths.Min(c => c)}");
         }
     }
 }

@@ -2,15 +2,17 @@
 using AdventOfCode2018.Day1;
 using AdventOfCode2018.Day2;
 using AdventOfCode2018.Day3;
+using AdventOfCode2018.Day4;
 using AdventOfCode2018.Day5;
+using AdventOfCode2018.Day6;
 
 namespace AdventOfCode2018
 {
-    class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            new SolutionDay5().RunSolutionPart1();
+            new SolutionDay6().RunSolutionPart1();
             Console.ReadKey(true);
         }
     }
