@@ -5,6 +5,7 @@ using AdventOfCode2018.Day3;
 using AdventOfCode2018.Day4;
 using AdventOfCode2018.Day5;
 using AdventOfCode2018.Day6;
+using AdventOfCode2018.Day7;
 
 namespace AdventOfCode2018
 {
@@ -12,7 +13,7 @@ namespace AdventOfCode2018
     {
         private static void Main(string[] args)
         {
-            new SolutionDay4().RunSolutionPart2();
+            new SolutionDay7().RunSolutionPart1();
             Console.ReadKey(true);
         }
     }
