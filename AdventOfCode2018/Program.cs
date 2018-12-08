@@ -12,7 +12,7 @@ namespace AdventOfCode2018
     {
         private static void Main(string[] args)
         {
-            new SolutionDay6().RunSolutionPart1();
+            new SolutionDay4().RunSolutionPart2();
             Console.ReadKey(true);
         }
     }
